@@ -1,0 +1,6 @@
+Flask
+flask-mysqldb
+flask-login
+Flask-WTF
+Flask-Bootstrap
+email_validator

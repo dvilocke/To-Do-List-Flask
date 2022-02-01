@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    HOME
+{%endblock%}
+
+{%block content%}
+
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong><li>{{ message }}</li></strong> 
+    </div>  
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+
+    <div class="container-fluid">
+        <img src="{{url_for('static', filename='images/imagen.jpg')}}" class="rounded mx-auto d-block" alt="image">
+        
+    </div>
+    <div class="text-center m-5">
+        <p class="lead text-primary ">program to manage your tasks, <small class="text-muted">Ip:{{ip}}</small></p>
+    </div>
+   
+{%endblock%}

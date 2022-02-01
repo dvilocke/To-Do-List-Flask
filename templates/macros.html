@@ -1,0 +1,10 @@
+{%macro render_table(elements)%}
+<tr class="table-primary">
+    <td>{{elements[1]}}</td>
+    <td>{{elements[2]}}</td>
+    <td>{{elements[3]}}</td>
+    <td><a href="{{url_for('delete', name = elements[1], description = elements[2], state = elements[3])}}" class="btn.btn-danger">DELETE</a></td>
+    <td><a href="{{url_for('add', name = elements[1], description = elements[2], state = elements[3])}}" class="btn.btn-danger">EDIT</a></td>
+    <td><a href="{{url_for('change_states',name = elements[1] , description = elements[2], state = elements[3])}}" class="btn.btn-secondary">CHANGE</a></td>
+</tr>
+{%endmacro%}
